@@ -1,0 +1,17 @@
+# A mapping of keyword aliases to event type. Form of match:event type.
+# Required.
+aliasMappings:
+  "[BuildPlease]": "Build_Action"
+  ?buildme: "Build_Action"
+  ?triage: triage
+
+# Determines if alias matching is case sensitive.
+# Optional. Defaults to true.
+caseSensitive: true
+
+# A mapping of event types to user group permissions.
+# Form of event type:group name or combined names (Explained lower in the README). 
+# Optional, defaults to CONTRIBUTOR or OWNER for each.
+permissionMappings:
+  "BuildAction": [MEMBER, CONTRIBUTOR, PRAUTHOR]
+  triage: 'CONTRIBUTOR'
